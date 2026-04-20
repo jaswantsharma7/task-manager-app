@@ -54,6 +54,9 @@ App runs on `http://localhost:3000`
 
 ![alt text](image.png)
 
+FrontEnd (Live) : https://task-manager-app-zeta-green.vercel.app/
+BackEnd (Live) : https://task-manager-app-4gru.onrender.com
+
 
 ## API Endpoints
 
@@ -67,7 +70,7 @@ App runs on `http://localhost:3000`
 ## Project Structure
 
 ```
-project-root/
+task-manager-app/
 ├── backend/
 │   ├── models/
 │   │   └── Task.js
