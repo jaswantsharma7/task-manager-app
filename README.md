@@ -33,7 +33,7 @@ A basic Task Management System built with the MERN stack.
 ```bash
 cd backend
 npm install
-cp .env.example .env
+cp .env
 # Edit .env and set your MONGO_URI if needed
 npm run dev
 ```
