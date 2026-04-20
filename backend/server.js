@@ -1,6 +1,12 @@
 require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
+app.use(cors({
+  origin: [
+    "https://task-manager-app-zeta-green.vercel.app/",
+    "http://localhost:3000",
+    "http://localhost:5000"
+  ]
+}));
 const connectDB = require('./config/db');
 const taskRoutes = require('./routes/taskRoutes');
 
