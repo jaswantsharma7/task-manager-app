@@ -1,6 +1,9 @@
+// Importing the Task model to interact with the tasks collection in MongoDB. This model defines the schema for tasks and provides methods for database operations.
 const Task = require('../models/Task');
 
-// GET
+//creating CRUD operations for tasks using async/await and try/catch for error handling. Each function corresponds to a specific HTTP method and interacts with the Task model to perform database operations. The functions are then exported for use in the routes.
+
+// GET 
 const getTasks = async (req, res) => {
   try {
     const tasks = await Task.find().sort({ createdDate: -1 });
@@ -10,7 +13,8 @@ const getTasks = async (req, res) => {
   }
 };
 
-// POST 
+
+// POST
 const createTask = async (req, res) => {
   try {
     const { title, description } = req.body;
@@ -24,7 +28,8 @@ const createTask = async (req, res) => {
   }
 };
 
-// PUT
+
+// PUT using findById and save
 const updateTask = async (req, res) => {
   try {
     const task = await Task.findById(req.params.id);
@@ -42,7 +47,8 @@ const updateTask = async (req, res) => {
   }
 };
 
-// DELETE
+
+// DELETE using findByIdAndDelete (nodemon required)
 const deleteTask = async (req, res) => {
   try {
     const task = await Task.findByIdAndDelete(req.params.id);
@@ -54,5 +60,7 @@ const deleteTask = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+//exporting the functions to be used in the routes
 
 module.exports = { getTasks, createTask, updateTask, deleteTask };

@@ -1,3 +1,4 @@
+/* The index.css file contains the global styles for the React application. It includes basic resets for margins and padding, sets a default font and background color for the body, and defines styles for the main app container, header, error banner, task form, task list, and individual task items. The styles are designed to create a clean and user-friendly interface for the task manager application, with clear visual distinctions between different components and states (e.g., pending vs completed tasks). The CSS also includes responsive design considerations to ensure the application looks good on various screen sizes. */
 * {
   box-sizing: border-box;
   margin: 0;

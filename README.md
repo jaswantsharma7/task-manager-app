@@ -50,14 +50,6 @@ npm start
 
 App runs on `http://localhost:3000`
 
-## ScreenShots/Live Link
-
-![alt text](image.png)
-
-FrontEnd (Live) : https://task-manager-app-zeta-green.vercel.app/ \
-BackEnd (Live) : https://task-manager-app-4gru.onrender.com
-
-
 ## API Endpoints
 
 | Method | Endpoint         | Description     |
@@ -70,7 +62,7 @@ BackEnd (Live) : https://task-manager-app-4gru.onrender.com
 ## Project Structure
 
 ```
-task-manager-app/
+project-root/
 ├── backend/
 │   ├── models/
 │   │   └── Task.js

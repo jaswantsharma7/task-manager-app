@@ -9,11 +9,10 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "express": "^4.22.1",
-    "mongodb": "^7.1.1",
+    "express": "^4.18.2",
     "mongoose": "^7.3.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.0.1"
   }
 }
