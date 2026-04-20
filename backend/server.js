@@ -11,7 +11,6 @@ const app = express();
 const { setServers } = require('node:dns/promises');
 setServers(['8.8.8.8', '1.1.1.1']);
 
-app.use(cors());
 app.use(express.json());
 app.use(cors({
   origin: [
