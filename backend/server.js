@@ -8,17 +8,13 @@ connectDB();
 
 const app = express();
 
-const { setServers } = require('node:dns/promises');
-setServers(['8.8.8.8', '1.1.1.1']);
-
-app.use(express.json());
 app.use(cors({
   origin: [
     "https://student-app-delta-eosin.vercel.app",
     "http://localhost:3000",
-    "http://localhost:5000"
   ]
 }));
+
 app.use(express.json());
 app.use('/api/tasks', taskRoutes);
 
