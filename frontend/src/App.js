@@ -25,7 +25,7 @@ function App() {
       const data = await getTasks();
       setTasks(data);
     } catch (err) {
-      setError('Server is down due to inactivity. Please refresh after 50 seconds for the server to wake up.');
+      setError('Failed to load tasks. Please try again later.');
     } finally {
       setLoading(false);
     }
