@@ -9,6 +9,8 @@ app.use(cors({
 }));
 const connectDB = require('./config/db');
 const taskRoutes = require('./routes/taskRoutes');
+const { setServers } = require('node:dns/promises');
+setServers(['8.8.8.8', '1.1.1.1']);
 
 connectDB();
 
