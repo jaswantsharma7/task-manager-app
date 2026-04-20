@@ -141,3 +141,13 @@ The following changes were made to improve this behaviour:
 
 **`frontend/src/index.css`**
 - Added styles for `.loading-spinner`, `.spinner`, and the `@keyframes spin` animation at the end of the file. No existing styles were modified.
+
+
+## Note: 
+- This project was done for Live Assessment, conducted during MERN Stack training program at GNC, Greater Noida.
+- The Initial Commit was published in the repository well within the time limit (120 minutes).
+- All commits after the initial commit were made to HOST/Deploy the App live using vercel and render.
+- Some Minor Features were also added that do not affect the overall working of the Application (Listed under the "Recent Changes" section).
+- This project is the work of it's author : Jaswant Sharma.
+- There is no use of AI in implementing and creating this application, and the core features of MERN, as mentioned in the Assessment.
+- Styling Ideas were 'referenced' (not copied) with AI.
