@@ -50,13 +50,9 @@ npm start
 
 App runs on `http://localhost:3000`
 
-## ScreenShots/Live Link
+## ScreenShots
 
 ![alt text](image.png)
-
-FrontEnd (Live) : https://task-manager-app-zeta-green.vercel.app/ \
-BackEnd (Live) : https://task-manager-app-4gru.onrender.com
-
 
 ## API Endpoints
 
