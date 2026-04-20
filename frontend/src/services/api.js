@@ -1,5 +1,5 @@
 // The api.js file contains functions for making API calls to the backend server to perform CRUD operations on tasks. Each function corresponds to a specific API endpoint and HTTP method, allowing the frontend to interact with the backend to fetch, create, update, and delete tasks. The functions use the Fetch API to make asynchronous requests and handle responses, throwing errors if the requests fail. This abstraction allows the rest of the frontend code to call these functions without worrying about the underlying API details.
-const BASE_URL = "https://task-manager-app-evo2.onrender.com/api/tasks";
+const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/tasks';
 
 // Each function in this file is an asynchronous function that makes a fetch request to the corresponding API endpoint. The functions handle the response by checking if the response is okay (res.ok) and throwing an error if it is not. If the response is successful, they return the parsed JSON data from the response. This structure allows for clean and reusable API calls throughout the frontend application.
 
