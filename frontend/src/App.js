@@ -12,6 +12,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [filter, setFilter] = useState('All');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchTasks();
@@ -19,11 +20,14 @@ function App() {
 
   // The fetchTasks function is an asynchronous function that fetches the list of tasks from the backend API using the getTasks function. If the request is successful, it updates the tasks state with the fetched data. If the request fails, it sets an error message to inform the user that loading tasks failed, possibly due to the server not running.
   const fetchTasks = async () => {
+    setLoading(true);
     try {
       const data = await getTasks();
       setTasks(data);
     } catch (err) {
-      setError('Failed to load tasks. Is the server running?');
+      setError('Failed to load tasks. Please try again later.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -78,6 +82,7 @@ function App() {
           onDelete={handleDelete}
           filter={filter}
           onFilterChange={setFilter}
+          loading={loading}
         />
       </main>
     </div>
