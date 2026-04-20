@@ -12,7 +12,12 @@ connectDB();
 const app = express();
 
 // Setting up middleware for the Express application. The cors middleware allows the server to accept requests from different origins, which is essential for frontend applications hosted on different domains. The express.json() middleware parses incoming JSON payloads, making it easier to handle data sent in the body of HTTP requests. The app.use() method is used to apply these middleware functions to the Express application, ensuring that they are executed for every incoming request before reaching the route handlers.
-app.use(cors());
+
+// We can use defualt app.use(cors()) to accept requests from anywhere
+app.use(cors({
+  origin: "https://task-manager-app-phi-tawny.vercel.app/"
+}));
+
 app.use(express.json());
 app.use('/api/tasks', taskRoutes);
 
