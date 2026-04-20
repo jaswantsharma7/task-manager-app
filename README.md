@@ -51,8 +51,11 @@ npm start
 App runs on `http://localhost:3000`
 
 ## ScreenShots
-
+Frontend:
 ![alt text](image.png)
+
+Backend:
+<img width="1677" height="440" alt="image" src="https://github.com/user-attachments/assets/4c274183-394a-4fb8-85ce-8e41f1afa4ca" />
 
 ## API Endpoints
 
