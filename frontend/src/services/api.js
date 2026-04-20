@@ -1,4 +1,4 @@
-const BASE_URL = '/api/tasks';
+const BASE_URL = 'https://task-manager-app-4gru.onrender.com';
 
 export const getTasks = async () => {
   const res = await fetch(BASE_URL);
