@@ -91,5 +91,6 @@ task-manager-app/
 │   │   ├── index.js
 │   │   └── index.css
 │   └── package.json
+├── README.md
 └── .gitignore
 ```
