@@ -50,6 +50,10 @@ npm start
 
 App runs on `http://localhost:3000`
 
+## ScreenShots
+
+![alt text](image.png)
+
 ## API Endpoints
 
 | Method | Endpoint         | Description     |
@@ -62,7 +66,7 @@ App runs on `http://localhost:3000`
 ## Project Structure
 
 ```
-project-root/
+task-manager-app/
 ├── backend/
 │   ├── models/
 │   │   └── Task.js
