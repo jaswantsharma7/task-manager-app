@@ -1,5 +1,9 @@
 # Task Manager
 
+**Live App:** https://task-manager-app-phi-tawny.vercel.app/
+
+**API Base URL:** https://task-manager-app-evo2.onrender.com/api/tasks
+
 A basic Task Management System built with the MERN stack.
 
 ## Features
@@ -10,6 +14,7 @@ A basic Task Management System built with the MERN stack.
 - Delete tasks
 - Filter tasks by status (All / Pending / Completed)
 - Basic form validation (empty fields)
+- Loading indicator while fetching tasks from the API
 
 ## Tech Stack
 
@@ -20,6 +25,21 @@ A basic Task Management System built with the MERN stack.
 | Database | MongoDB (Mongoose)                |
 | API      | REST (GET, POST, PUT, DELETE)     |
 | Styling  | Plain CSS                         |
+| Hosting (Frontend) | Vercel                  |
+| Hosting (Backend)  | Render                  |
+| Hosting (Database) | MongoDB Atlas           |
+
+## Deployment
+
+The app is live and fully hosted. No local setup is required to use it.
+
+| Layer    | Platform      | URL                                                                 |
+|----------|---------------|---------------------------------------------------------------------|
+| Frontend | Vercel        | https://task-manager-app-phi-tawny.vercel.app/                      |
+| Backend  | Render        | https://task-manager-app-evo2.onrender.com/api/tasks                |
+| Database | MongoDB Atlas | Managed cloud cluster (not publicly accessible)                     |
+
+> Note: The backend is hosted on Render's free tier. If the service has been idle, the first request may take up to 30 seconds to respond while it wakes up. The loading spinner in the UI will remain visible during this time.
 
 ## Setup Instructions
 
@@ -51,13 +71,16 @@ npm start
 App runs on `http://localhost:3000`
 
 ## ScreenShots
+
 Frontend:
 ![alt text](image.png)
 
 Backend:
-<img width="1677" height="440" alt="image" src="https://github.com/user-attachments/assets/4c274183-394a-4fb8-85ce-8e41f1afa4ca" />
+![alt text](image-1.png)
 
 ## API Endpoints
+
+Base URL (live): `https://task-manager-app-evo2.onrender.com`
 
 | Method | Endpoint         | Description     |
 |--------|------------------|-----------------|
@@ -97,3 +120,24 @@ task-manager-app/
 ├── README.md
 └── .gitignore
 ```
+
+## Recent Changes
+
+### Loading state on task fetch
+
+Previously, the task list area would remain blank and show a generic error message ("Is the server running?") while the initial API request was in flight.
+
+The following changes were made to improve this behaviour:
+
+**`frontend/src/App.js`**
+- Added a `loading` state initialised to `true`.
+- `fetchTasks` now sets `loading` to `true` before the request and clears it in a `finally` block, ensuring it always resets regardless of success or failure.
+- The error message on fetch failure was updated to "Failed to load tasks. Please try again later."
+- The `loading` prop is passed down to `TaskList`.
+
+**`frontend/src/components/TaskList.js`**
+- Accepts the new `loading` prop.
+- While `loading` is `true`, a spinner and "Loading tasks..." message are shown in place of the task list or the empty state.
+
+**`frontend/src/index.css`**
+- Added styles for `.loading-spinner`, `.spinner`, and the `@keyframes spin` animation at the end of the file. No existing styles were modified.
