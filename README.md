@@ -27,18 +27,6 @@ A basic Task Management System built with the MERN stack.
 | Hosting (Backend)  | Render                  |
 | Hosting (Database) | MongoDB Atlas           |
 
-## Deployment
-
-The app is live and fully hosted. No local setup is required to use it.
-
-| Layer    | Platform      | URL                                                                 |
-|----------|---------------|---------------------------------------------------------------------|
-| Frontend | Vercel        | https://task-manager-app-phi-tawny.vercel.app/                      |
-| Backend  | Render        | https://task-manager-app-evo2.onrender.com/api/tasks                |
-| Database | MongoDB Atlas | Managed cloud cluster (not publicly accessible)                     |
-
-> Note: The backend is hosted on Render's free tier. If the service has been idle, the first request may take up to 30 seconds to respond while it wakes up. The loading spinner in the UI will remain visible during this time.
-
 ## Setup Instructions
 
 ### Prerequisites
