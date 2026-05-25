@@ -2,8 +2,6 @@
 
 **Live App:** https://task-manager-app-phi-tawny.vercel.app/
 
-**API Base URL:** https://task-manager-app-evo2.onrender.com/api/tasks
-
 A basic Task Management System built with the MERN stack.
 
 ## Features
